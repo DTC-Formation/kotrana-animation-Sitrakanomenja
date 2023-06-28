@@ -28,25 +28,31 @@
    background: rgb(139, 156, 112);
 }
 .item2{
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
     background: red;
-    animation: translation 2s ease-in-out infinite;
+    position: relative;
+    animation-name: tour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
-@keyframes translation {
-    0% {transform: translateX(0px);}
-    100% {transform:translateX(300px);}
-}
+@keyframes tour {
+    0%   {background-color:red; left:0px; top:50px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:400px; top:50px;}
+    75%  {background-color:green; left:200px; top:200px;}
+    100% {background-color:red; left:0px; top:50px;}
+  }
 /* ________________________item-3_________________________________________ */
 .item-3{
     width: 500px;
    height: 300px;
-   background: rgb(15, 117, 86);
 }
 .item3{
-    height: 250px;
-    width: 400px;
-    margin: 20px;
+    height: 200px;
+    width: 300px;
+    margin: 40px 0px 0px 100px;
     animation: color-change 3s linear infinite;
 }
 @keyframes color-change {
@@ -61,15 +67,32 @@
    background: rgb(0, 153, 255);
 }
 .item4{
+    margin: 50px 0px 0px 150px;
     height: 200px;
     width: 200px;
-    background: red;
-    animation: zoom 3s ease-out infinite;
+    background:coral;
+    animation: square-to-circle 2s infinite alternate;
 }
-@keyframes zoom {
-    0% {transform: scale(1);}
-    50%{transform: scale(1.2);}
-    100% {transform: scale(1);}
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0;
+        background: coral;
+    }
+    25%{
+        border-radius: 10%;
+        background: darksalmon;
+    }
+    50%{
+        border-radius: 25%;
+        background: indianred;
+    }
+    75%{
+        border-radius: 40%;
+        background: lightcoral;
+    }
+    100% {border-radius: 50%;
+        background: darkorange;
+    }
 }
 /* _______________________________item-5_________________________________________ */
 .item-5{
@@ -93,8 +116,57 @@
     50%{width: 75px;height: 80px;width: 80px;  background: blue;opacity: 50%;}
     75%{width: 80px;height: 90px;width: 90px;  background: brown;opacity: 75%;}
 }
+/* __________________item-6_______________________________________________ */
 .item-6{
     width: 500px;
    height: 300px;
    background: rgb(255, 0, 170);
 }
+h3{
+    margin: 100px;
+    color: rgb(0, 0, 0);
+    font-size: 70px;
+    font-weight: 20px;
+    animation: fade;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+/* .item6{
+    width: 100px;
+    height: 100px;
+    background: goldenrod;
+    animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce  {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40%{transform: translate(-30px);}
+    60%{transform: translate(-15px);}
+} */
+/* .item6{
+    width: 100px;
+    height: 100px;
+    background: goldenrod;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+    0%, 50%, 100% {opacity: 1;}
+    25%, 75%{opacity: 0;}
+
+} */
+/* .item4{
+    height: 200px;
+    width: 200px;
+    background: red;
+    animation: zoom 3s ease-out infinite;
+}
+@keyframes zoom {
+    0% {transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100% {transform: scale(1);}
+} */
