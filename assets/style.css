@@ -8,7 +8,7 @@
 }
 /* _______________________item-1________________________________ */
 .item-1{
-     width: 500px;
+    width: 500px;
     height: 300px;
     background: black;
 }
@@ -190,7 +190,7 @@ p{
    height: 300px;
    background: rgb(255, 0, 170);
 }
-h3{
+h2{
     color: rgb(0, 0, 0);
     font-size: 70px;
     font-weight: 20px;
@@ -313,5 +313,114 @@ margin: 50px 0px 0px 0px;
 }
 
 }
+/* ______ */
+h3{
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+}
+.item{
+    width: 500px;
+   height: 300px;
+   background: black;
+}
+/* _______________________ */
+.item-7{
+        
+        animation-name: slideDown;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+       animation-iteration-count: infinite;
+    
+} @keyframes slideDown {
+        0% {
+          transform: translateY(-420px);
+        }
+    
+        100% {
+          transform: translateY(0%);
+        }
+      }
+/* ______ */
+.item-8{ 
+        margin: 24px;
+        width: 50px;
+        height: 50px;
+        background: #f50057;
+        animation: zoom-in-zoom-out 1s ease infinite;
+      }
+      @keyframes zoom-in-zoom-out {
+        0% {
+          transform: scale(1, 1);
+        }
+        50% {
+          transform: scale(1.5, 1.5);
+        }
+        100% {
+          transform: scale(1, 1);
+        }
+      }
 
+/* ______ */
+.item-9{
+    width: 500px;
+   height: 300px;
+   background: black;
+}
+/* ______ */
+.item-10{
+    width: 500px;
+   height: 300px;
+   background: black;
+}
+/* ______ */
+.item-11{
+    width: 500px;
+   height: 300px;
+   background: black;
+}
+/* ______ */
+.item-12{
+    width: 500px;
+   height: 300px;
+   background: black;
+}
+/* __________________________________________ */
+
+.containers {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .menu-toggler {
+    display: none;
+  }
+  
+  .menu-toggler-label {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .stagger-menu {
+    list-style-type: none;
+    margin: 16px 0;
+    padding: 0;
+  }
+  
+  .stagger-menu li {
+    margin-bottom: 8px;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+  }
+  
+  .menu-toggler:checked ~ .stagger-menu li {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.055s * var(--i));
+  }
 
