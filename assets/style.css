@@ -1,33 +1,35 @@
-
-
-.container{
-   
+/* .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} */
+h3{
+    position: relative;
+    text-align: center;
+  }
 /* _______________________item-1________________________________ */
-.item-1{
-    width: 500px;
-    height: 300px;
-    background: black;
-}
 .item1{
-    height: 200px;
-    width: 20px;
-    background: red;
-    position: static;
-    animation: rotation 2s linear infinite;
-}
-@keyframes rotation {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
-}
+        font-size: 70px;
+        font-weight: bolder;
+        animation-name: slideDown;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    
+} @keyframes slideDown {
+        0% {
+          transform: translateY(-420px);
+        }
+    
+        100% {
+          transform: translateY(0%);
+        }
+      }
 /* ____________________________item-2____________________________ */
 .item-2{
-    width: 500px;
-   height: 300px;
-   background: rgb(139, 156, 112);
+  height: 300px;
+  background: rgb(139, 156, 112);
 }
 .item2{
     height: 100px;
@@ -41,15 +43,16 @@
 }
 @keyframes tour {
     0%   {background-color:red; left:0px; top:50px;}
-    25%  {background-color:yellow; left:200px; top:0px;}
-    50%  {background-color:blue; left:400px; top:50px;}
-    75%  {background-color:green; left:200px; top:200px;}
+    25%  {background-color:yellow; left:280px; top:0px;}
+    50%  {background-color:blue; left:530px; top:50px;}
+    75%  {background-color:green; left:280px; top:200px;}
     100% {background-color:red; left:0px; top:50px;}
   }
 /* ________________________item-3_________________________________________ */
 .item-3{
     width: 500px;
    height: 300px;
+   background: #c85c34;
 }
 .item3{
     height:20px;
@@ -62,7 +65,7 @@
 }
 @keyframes progress {
     0%{width: 10px; opacity: 0%;}
-    25%{width: 50px;background: violet; opacity: 25%;}
+    25%{width: 50px;background: rgb(150, 13, 150); opacity: 25%;}
     50%{width: 75px;background: blue;opacity: 50%;}
     75%{width: 80px;background: brown;opacity: 75%;}
 }
@@ -205,165 +208,38 @@ h2{
     from {opacity: 1;}
     to {opacity: 0;}
 }
-/* ________________________responsive__________________________________________ */
 
-
-@media only screen and (max-width:600px){
-    .item2{
-        height: 80px;
-        width: 80px;
-        border-radius: 50%;
-        background: red;
-        position: relative;
-        animation-name: tour;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-    }
-    @keyframes tour {
-        0%   {background-color:red; left:0px; top:100px;}
-        25%  {background-color:yellow; left:200px; top:3px;}
-        50%  {background-color:blue; left:420px; top:100px;}
-        75%  {background-color:green; left:200px; top:220px;}
-        100% {background-color:red; left:0px; top:100px;}
-      }
-
-    .item3{
-    margin: 50px 0px 0px 0px;
-    }
-    .item4{
-        margin: 50px 0px 0px 135px;
-    }
-} 
-@media only screen and (min-width:600px){
-.item2{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background: red;
-    position: relative;
-    animation-name: tour;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes tour {
-    0%   {background-color:red; left:0px; top:100px;}
-    25%  {background-color:yellow; left:200px; top:3px;}
-    50%  {background-color:blue; left:420px; top:100px;}
-    75%  {background-color:green; left:200px; top:220px;}
-    100% {background-color:red; left:0px; top:100px;}
-  }
-
-.item3{
-margin: 50px 0px 0px 0px;
-}
-.item4{
-    margin: 50px 0px 0px 135px;
-}
-} 
-@media only screen and (max-width:768px){
-.item2{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background: red;
-    position: relative;
-    animation-name: tour;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes tour {
-    0%   {background-color:red; left:0px; top:100px;}
-    25%  {background-color:yellow; left:200px; top:3px;}
-    50%  {background-color:blue; left:420px; top:100px;}
-    75%  {background-color:green; left:200px; top:220px;}
-    100% {background-color:red; left:0px; top:100px;}
-  }
-
-.item3{
-margin: 50px 0px 0px 0px;
-}
-.item4{
-    margin: 50px 0px 0px 135px;
-}
-} 
-
-@media only screen and (max-width:992px){
-.item2{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background: red;
-    position: relative;
-    animation-name: tour;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-@keyframes tour {
-    0%   {background-color:red; left:0px; top:100px;}
-    25%  {background-color:yellow; left:200px; top:3px;}
-    50%  {background-color:blue; left:420px; top:100px;}
-    75%  {background-color:green; left:200px; top:220px;}
-    100% {background-color:red; left:0px; top:100px;}
-  }
-
-.item3{
-margin: 50px 0px 0px 0px;
-}
-.item4{
-    margin: 50px 0px 0px 135px;
-}
-
-}
-/* ______ */
-h3{
-    position: relative;
-    color: aliceblue;
-    font-size: 50px;
-    text-align: center;
-}
-.item{
-    width: 500px;
-   height: 300px;
-   background: black;
-}
 /* _______________________ ______________item7____________________________________________________________________*/
-.item-7{
-  width: 500px;
- height: 300px;
- background: black;
-}
-.item{
-        
-        animation-name: slideDown;
-        animation-duration: 1s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-    
-} @keyframes slideDown {
-        0% {
-          transform: translateY(-420px);
-        }
-    
-        100% {
-          transform: translateY(0%);
-        }
+
+ .item-7{
+    width: 500px;
+    height: 300px;
+    background: rgb(114, 114, 114);
       }
+ .item7{
+    height: 200px;
+    width: 20px;
+    background: red;
+    position: static;
+    animation: rotation 2s linear infinite;
+    }
+    @keyframes rotation {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
 /* ______ ____________________________________item8__________________________________________________*/
 .item-8{
   width: 500px;
  height: 300px;
- background: black;
+ background: #1feac5;;
 }
 :root {
-    --main-color: #1feac5;
     --point-color: #2501b3; 
     --size: 10px;
   }
   
   .loader {
    margin-top: 100px;
-   background-color: var(--main-color);
    overflow: hidden;
    position: relative;
    padding-top: 10ps;
@@ -443,33 +319,12 @@ h3{
   height: 300px;
   background: black;
 }
-/* .logo-holder {
-    background: #f2f2f2;
-    width: 180px;
-    height: 220px;
-    position: relative;
-    margin: 0 auto ;
-    padding-top: 12px;
-    padding-bottom: 24px;
-    transform: translateZ(0);
- } */
 
- .bg {
-  position: absolute;
-  top: 9px;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  background: url(http://boutique.flarework.com/wp-content/themes/boutique/img/logo_large.png) center 0px no-repeat ;
-    background-size: contain;
-    filter: drop-shadow(0px 6px 25px rgba(0,0,0,0.5));
-}
 .bar {
     position: relative;
     height: 8px;
-    background: #6a6a6a;
-    width:  0%;
-    top: 0px;
+    width: 0%;
+    top: 20px;
     left: 18px;
     margin-top: 8px;
     box-shadow: 0 0 3px rgba(192,192,192,0.9);
@@ -501,8 +356,6 @@ h3{
 .bar.fill6 {
    animation:  fill-6 5s infinite alternate, colors 5s infinite alternate;
 }
-
-
 
 @keyframes fill {
   0%   { width: 0; }
@@ -555,29 +408,27 @@ h3{
 }
 
 @keyframes colors {
-  0% { background-color: #5a5a5a;}
-  50% { background-color: #3a3;}
-  100% { background-color: #6a6a6a;}
+  0% { background-color: #d34306;}
+  50% { background-color: yellow}
+  100% { background-color: #0b1a69;}
 }
-/* ______ */
 
-/* __________________________________________ */
-
-.containers {
-    overflow-x: hidden;
-    width: 100%;
-  }
+/* __________________________________________ item12_________________________________________________________*/
+.item-12{
+  width: 500px;
+  height: 300px;
+  background: rgb(14, 152, 149);
+  overflow-x: hidden;
   
-  .menu-toggler {
+}
+ .menu-toggler {
     display: none;
   }
-  
   .menu-toggler-label {
     cursor: pointer;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
   }
-  
   .stagger-menu {
     list-style-type: none;
     margin: 16px 0;
@@ -600,3 +451,111 @@ h3{
     transition-delay: calc(0.055s * var(--i));
   }
 
+/* ________________________responsive__________________________________________ */
+
+/* @media only screen and (max-width:600px){
+    .item2{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background: red;
+        position: relative;
+        animation-name: tour;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes tour {
+        0%   {background-color:red; left:0px; top:100px;}
+        25%  {background-color:yellow; left:200px; top:3px;}
+        50%  {background-color:blue; left:420px; top:100px;}
+        75%  {background-color:green; left:200px; top:220px;}
+        100% {background-color:red; left:0px; top:100px;}
+      }
+
+    .item3{
+    margin: 50px 0px 0px 0px;
+    }
+    .item4{
+        margin: 50px 0px 0px 135px;
+    }
+} 
+@media only screen and (min-width:600px){
+.item2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: red;
+    position: relative;
+    animation-name: tour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes tour {
+    0%   {background-color:red; left:0px; top:100px;}
+    25%  {background-color:yellow; left:200px; top:3px;}
+    50%  {background-color:blue; left:420px; top:100px;}
+    75%  {background-color:green; left:200px; top:220px;}
+    100% {background-color:red; left:0px; top:100px;}
+  }
+
+  .item3{
+  margin: 50px 0px 0px 0px;
+  }
+  .item4{
+      margin: 50px 0px 0px 135px;
+  }
+} 
+@media only screen and (max-width:768px){
+.item2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: red;
+    position: relative;
+    animation-name: tour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes tour {
+    0%   {background-color:red; left:0px; top:100px;}
+    25%  {background-color:yellow; left:200px; top:3px;}
+    50%  {background-color:blue; left:420px; top:100px;}
+    75%  {background-color:green; left:200px; top:220px;}
+    100% {background-color:red; left:0px; top:100px;}
+  }
+
+    .item3{
+    margin: 50px 0px 0px 0px;
+    }
+    .item4{
+        margin: 50px 0px 0px 135px;
+    }
+} 
+
+@media only screen and (max-width:992px){
+.item2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: red;
+    position: relative;
+    animation-name: tour;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes tour {
+    0%   {background-color:red; left:0px; top:100px;}
+    25%  {background-color:yellow; left:200px; top:3px;}
+    50%  {background-color:blue; left:420px; top:100px;}
+    75%  {background-color:green; left:200px; top:220px;}
+    100% {background-color:red; left:0px; top:100px;}
+  }
+
+.item3{
+margin: 50px 0px 0px 0px;
+}
+.item4{
+    margin: 50px 0px 0px 135px;
+}
+
+} */
