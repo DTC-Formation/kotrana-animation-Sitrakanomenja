@@ -326,8 +326,13 @@ h3{
    height: 300px;
    background: black;
 }
-/* _______________________ */
+/* _______________________ ______________item7____________________________________________________________________*/
 .item-7{
+  width: 500px;
+ height: 300px;
+ background: black;
+}
+.item{
         
         animation-name: slideDown;
         animation-duration: 1s;
@@ -344,30 +349,60 @@ h3{
           transform: translateY(0%);
         }
       }
-/* ______ */
-.item-8{ 
-        margin: 24px;
-        width: 50px;
-        height: 50px;
-        background: #f50057;
-        animation: zoom-in-zoom-out 1s ease infinite;
-      }
-      @keyframes zoom-in-zoom-out {
-        0% {
-          transform: scale(1, 1);
-        }
-        50% {
-          transform: scale(1.5, 1.5);
-        }
-        100% {
-          transform: scale(1, 1);
-        }
-      }
-
-/* ______ */
-
-.item-9 {
-    height: 100px;
+/* ______ ____________________________________item8__________________________________________________*/
+.item-8{
+  width: 500px;
+ height: 300px;
+ background: black;
+}
+:root {
+    --main-color: #1feac5;
+    --point-color: #2501b3; 
+    --size: 10px;
+  }
+  
+  .loader {
+   margin-top: 100px;
+   background-color: var(--main-color);
+   overflow: hidden;
+   position: relative;
+   padding-top: 10ps;
+   padding-left: 10px;
+   display: flex; 
+   align-items: center; 
+   align-content: center;
+   justify-content: center; 
+   
+  }
+  .loader__element {
+    border-radius: 100%;
+    border: var(--size) solid var(--point-color);
+    margin: calc(var(--size)*2);
+  }
+  
+  .loader__element:nth-child(1) {
+    animation: preloader .6s ease-in-out alternate infinite;
+  }
+  .loader__element:nth-child(2) {
+    animation: preloader .6s ease-in-out alternate .2s infinite;
+  }
+  
+  .loader__element:nth-child(3) {
+    animation: preloader .6s ease-in-out alternate .4s infinite;
+  }
+  
+  @keyframes preloader {
+    100% { transform: scale(2); }
+  }
+    
+/* ________________________________________item9_________________________________________________________________ */
+.item-9{
+  width: 500px;
+  height: 300px;
+  background:white
+}
+.shake{
+  height: 100px;
   position: relative;
   padding: 80px 0px 0px 80px;
   animation: shakeY 1s infinite;
@@ -378,9 +413,14 @@ h3{
     20%, 40%, 60%,80%{transform: translateY(10px);}
 }
 
-/* ______ */
+/* __________________________________________item10____________________________________________________________________ */
 .item-10{
-     animation: effect linear 1s infinite;
+  width: 500px;
+  height: 300px;
+  background: black;
+}
+.item10{
+  animation: effect linear 1s infinite;
 }
 @keyframes effect {
     0% {
@@ -397,8 +437,13 @@ h3{
         transform: scale(1, 1);
     }
 }
-/* ______ */
-.logo-holder {
+/* ___________________________________________item11____________________________________________________________ */
+.item-11{
+  width: 500px;
+  height: 300px;
+  background: black;
+}
+/* .logo-holder {
     background: #f2f2f2;
     width: 180px;
     height: 220px;
@@ -407,10 +452,9 @@ h3{
     padding-top: 12px;
     padding-bottom: 24px;
     transform: translateZ(0);
- }
+ } */
 
-.bg {
-
+ .bg {
   position: absolute;
   top: 9px;
   left: 8px;
@@ -420,7 +464,6 @@ h3{
     background-size: contain;
     filter: drop-shadow(0px 6px 25px rgba(0,0,0,0.5));
 }
-
 .bar {
     position: relative;
     height: 8px;
@@ -431,7 +474,7 @@ h3{
     margin-top: 8px;
     box-shadow: 0 0 3px rgba(192,192,192,0.9);
     animation: fill 5s infinite alternate, colors 5s infinite alternate;
-}
+} 
 
 .bar.fill1 {
   animation: fill-1 5s infinite alternate, colors 5s infinite alternate;
@@ -517,45 +560,7 @@ h3{
   100% { background-color: #6a6a6a;}
 }
 /* ______ */
-:root {
-    --main-color: #ecf0f1;
-    --point-color: #555;
-    --size: 5px;
-  }
-  
-  .loader {
-    background-color: var(--main-color);
-    overflow: hidden;
- 
-    position: fixed;
-    top: 0; left: 0;
-    display: flex;
-    align-items: center;
-    align-content: center; 
-    justify-content: center;  
-    z-index: 100000;
-  }
-  
-  .loader__element {
-    border-radius: 100%;
-    border: var(--size) solid var(--point-color);
-    margin: calc(var(--size)*2);
-  }
-  
-  .loader__element:nth-child(1) {
-    animation: preloader .6s ease-in-out alternate infinite;
-  }
-  .loader__element:nth-child(2) {
-    animation: preloader .6s ease-in-out alternate .2s infinite;
-  }
-  
-  .loader__element:nth-child(3) {
-    animation: preloader .6s ease-in-out alternate .4s infinite;
-  }
-  
-  @keyframes preloader {
-    100% { transform: scale(2); }
-  }
+
 /* __________________________________________ */
 
 .containers {
