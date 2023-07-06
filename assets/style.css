@@ -9,6 +9,7 @@ h3{
   }
 /* _______________________item-1________________________________ */
 .item1{
+        height: 300px;
         font-size: 70px;
         font-weight: bolder;
         animation-name: slideDown;
@@ -42,17 +43,23 @@ h3{
     animation-iteration-count: infinite;
 }
 @keyframes tour {
-    0%   {background-color:red; left:0px; top:50px;}
+  0%   {background-color:red; left:-280px; top:0px;}
+  25%  {background-color:yellow; left:0px; top:-100px;}
+  50%  {background-color:blue; left:280px; top:20px;}
+  75%  {background-color:green; left:20px; top:100px;}
+  100% {background-color:red; left:-280px; top:0px;}
+}
+/* @keyframes tour {
+    0%   {background-color:red; left:-200px; top:50px;}
     25%  {background-color:yellow; left:280px; top:0px;}
     50%  {background-color:blue; left:530px; top:50px;}
     75%  {background-color:green; left:280px; top:200px;}
     100% {background-color:red; left:0px; top:50px;}
-  }
+  } */
 /* ________________________item-3_________________________________________ */
 .item-3{
-    width: 500px;
    height: 300px;
-   background: #c85c34;
+   background:wheat;
 }
 .item3{
     height:20px;
@@ -65,9 +72,9 @@ h3{
 }
 @keyframes progress {
     0%{width: 10px; opacity: 0%;}
-    25%{width: 50px;background: rgb(150, 13, 150); opacity: 25%;}
+    25%{width: 50px;background: rgb(239, 219, 5); opacity: 25%;}
     50%{width: 75px;background: blue;opacity: 50%;}
-    75%{width: 80px;background: brown;opacity: 75%;}
+    75%{width: 80px;background: rgb(234, 0, 0);opacity: 75%;}
 }
 .item33{
     height:20px;
@@ -82,23 +89,21 @@ h3{
 }
 @keyframes progress {
     0%{width: 10px; opacity: 0%;}
-    25%{width: 50px;background: violet; opacity: 25%;}
-    50%{width: 75px;background: blue;opacity: 50%;}
-    75%{width: 80px;background: brown;opacity: 75%;}
+    25%{width: 50px;background: rgb(6, 22, 167); opacity: 25%;}
+    50%{width: 75px;background: rgb(255, 0, 0);opacity: 50%;}
+    75%{width: 80px;background: rgb(34, 145, 0);opacity: 75%;}
 }
 
 
 /* ____________________________item-4_____________________________________________ */
 .item-4{
-    width: 500px;
    height: 300px;
    background: black;
 }
 .item4{
-    margin: 50px 0px 0px 150px;
     height: 200px;
     width: 200px;
-    background:coral;
+    background:rgb(156, 119, 237);
     animation: square-to-circle 2s infinite alternate;
 }
 @keyframes square-to-circle {
@@ -108,15 +113,15 @@ h3{
     }
     25%{
         border-radius: 10%;
-        background: darksalmon;
+        background: rgb(122, 233, 168);
     }
     50%{
         border-radius: 25%;
-        background: indianred;
+        background: rgb(199, 43, 43);
     }
     75%{
         border-radius: 40%;
-        background: lightcoral;
+        background: rgb(48, 21, 123);
     }
     100% {border-radius: 50%;
         background: darkorange;
@@ -124,7 +129,6 @@ h3{
 }
 /* _______________________________item-5_________________________________________ */
 .item-5{
-    width: 500px;
    height: 300px;
    background:black;
    position: relative;
@@ -189,14 +193,11 @@ p{
 
 /* __________________item-6_______________________________________________ */
 .item-6{
-    width: 500px;
    height: 300px;
-   background: rgb(255, 0, 170);
+   background: rgb(255, 117, 209);
 }
 h2{
-    color: rgb(0, 0, 0);
-    font-size: 70px;
-    font-weight: 20px;
+    font-weight: 70px;
     animation: fade;
     animation-delay: 2s;
     animation-duration: 3s;
@@ -212,7 +213,6 @@ h2{
 /* _______________________ ______________item7____________________________________________________________________*/
 
  .item-7{
-    width: 500px;
     height: 300px;
     background: rgb(114, 114, 114);
       }
@@ -229,9 +229,8 @@ h2{
     }
 /* ______ ____________________________________item8__________________________________________________*/
 .item-8{
-  width: 500px;
- height: 300px;
- background: #1feac5;;
+    height: 300px;
+    background: #1feac5;;
 }
 :root {
     --point-color: #2501b3; 
@@ -239,7 +238,6 @@ h2{
   }
   
   .loader {
-   margin-top: 100px;
    overflow: hidden;
    position: relative;
    padding-top: 10ps;
@@ -273,14 +271,13 @@ h2{
     
 /* ________________________________________item9_________________________________________________________________ */
 .item-9{
-  width: 500px;
   height: 300px;
   background:white
 }
 .shake{
   height: 100px;
+  width: 100px;
   position: relative;
-  padding: 80px 0px 0px 80px;
   animation: shakeY 1s infinite;
 }
 @keyframes shakeY {
@@ -291,11 +288,11 @@ h2{
 
 /* __________________________________________item10____________________________________________________________________ */
 .item-10{
-  width: 500px;
   height: 300px;
   background: black;
 }
 .item10{
+  font-size: 50px;
   animation: effect linear 1s infinite;
 }
 @keyframes effect {
@@ -315,7 +312,6 @@ h2{
 }
 /* ___________________________________________item11____________________________________________________________ */
 .item-11{
-  width: 500px;
   height: 300px;
   background: black;
 }
@@ -415,7 +411,6 @@ h2{
 
 /* __________________________________________ item12_________________________________________________________*/
 .item-12{
-  width: 500px;
   height: 300px;
   background: rgb(14, 152, 149);
   overflow-x: hidden;
